@@ -20,18 +20,19 @@
   },
   "requires_arc": true,
   "resources": "Resource/bundle/mapapi.bundle",
-  "source_files": "BaiduMapAPI.framework/Versions/A/Headers/*.h",
+  "source_files": "Source/BaiduMapAPI.framework/Headers/*.h",
   "frameworks": [
     "CoreLocation",
     "QuartzCore",
     "OpenGLES",
     "SystemConfiguration",
     "CoreGraphics",
-    "Security"
+    "Security",
+    "BaiduMapAPI"
   ],
   "preserve_paths": "Source/BaiduMapAPI.framework",
   "xcconfig": {
     "OTHER_LINKER_FLAGS": "-ObjC",
-    "FRAMEWORK_SEARCH_PATHS": "$(PODS_ROOT)/BaiduMapSDK_Pods"
+    "FRAMEWORK_SEARCH_PATHS": "$(PODS_ROOT)/BaiduMapSDK_Haidora/Source"
   }
 }
