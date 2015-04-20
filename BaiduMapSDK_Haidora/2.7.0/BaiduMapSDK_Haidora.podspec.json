@@ -12,7 +12,7 @@
     "mrdaios": "mrdaios@gmail.com"
   },
   "source": {
-    "git": "https://git.oschina.net/hulk/BaiduMapSDK.git",
+    "git": "https://github.com/Haidora/BaiduMapSDK_Haidora.git",
     "tag": "2.7.0"
   },
   "platforms": {
