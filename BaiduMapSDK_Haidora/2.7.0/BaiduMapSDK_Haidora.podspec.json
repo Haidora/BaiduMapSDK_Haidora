@@ -1,0 +1,37 @@
+{
+  "name": "BaiduMapSDK_Haidora",
+  "version": "2.7.0",
+  "summary": "Baidu Map SDK For iOS",
+  "description": "Baidu Map SDK For iOSK\n\n* Markdown format.\n * Don't worry about the indent, we strip it!\n",
+  "homepage": "http://developer.baidu.com/map/sdk-ios.htm",
+  "license": {
+    "type": "Copyright",
+    "text": "LICENSE  ©2013 Baidu, Inc. All rights reserved."
+  },
+  "authors": {
+    "mrdaios": "mrdaios@gmail.com"
+  },
+  "source": {
+    "git": "https://git.oschina.net/hulk/BaiduMapSDK.git",
+    "tag": "2.7.0"
+  },
+  "platforms": {
+    "ios": "5.0"
+  },
+  "requires_arc": true,
+  "resources": "Resource/bundle/mapapi.bundle",
+  "source_files": "BaiduMapAPI.framework/Versions/A/Headers/*.h",
+  "frameworks": [
+    "CoreLocation",
+    "QuartzCore",
+    "OpenGLES",
+    "SystemConfiguration",
+    "CoreGraphics",
+    "Security"
+  ],
+  "preserve_paths": "Source/BaiduMapAPI.framework",
+  "xcconfig": {
+    "OTHER_LINKER_FLAGS": "-ObjC",
+    "FRAMEWORK_SEARCH_PATHS": "$(PODS_ROOT)/BaiduMapSDK_Pods"
+  }
+}
