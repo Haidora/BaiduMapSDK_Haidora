@@ -15,46 +15,46 @@ Pod::Spec.new do |s|
   s.pod_target_xcconfig = { 'OTHER_LINKER_FLAGS' => '-ObjC','FRAMEWORK_SEARCH_PATHS' => '$(PODS_ROOT)/BaiduMapSDK_Haidora/Source' }
 
   s.subspec 'Base' do |base|
-      base.source_files = 'Pod/Classes/Core/**/*.{h,m}','Pod/Classes/*.{h,m}'
       base.source_files = 'Source/BaiduMapAPI_Base.framework/Headers/*.h'
-      base.frameworks = "CoreLocation","QuartzCore","OpenGLES","SystemConfiguration","CoreGraphics","Security","BaiduMapAPI_Base"
-      base.preserve_paths = "Source/BaiduMapAPI_Base.framework"
+      base.frameworks = 'CoreLocation','QuartzCore','OpenGLES','SystemConfiguration','CoreGraphics','Security','CoreTelephony','BaiduMapAPI_Base'
+      base.libraries = 'sqlite3.0','stdc++.6.0.9'
+      base.vendored_frameworks = 'Source/BaiduMapAPI_Base.framework'
   end
   s.subspec 'Cloud' do |cloud|
       cloud.source_files = 'Source/BaiduMapAPI_Cloud.framework/Headers/*.h'
       cloud.frameworks = 'BaiduMapAPI_Cloud'
-      cloud.preserve_paths = 'Source/BaiduMapAPI_Cloud.framework'
+      cloud.vendored_frameworks = 'Source/BaiduMapAPI_Cloud.framework'
       cloud.dependency 'BaiduMapSDK_Haidora/Base'
   end
   s.subspec 'Location' do |location|
       location.source_files = 'Source/BaiduMapAPI_Location.framework/Headers/*.h'
       location.frameworks = 'BaiduMapAPI_Location'
-      location.preserve_paths = 'Source/BaiduMapAPI_Location.framework'
+      location.vendored_frameworks = 'Source/BaiduMapAPI_Location.framework'
       location.dependency 'BaiduMapSDK_Haidora/Base'
   end
   s.subspec 'Map' do |map|
       map.source_files = 'Source/BaiduMapAPI_Map.framework/Headers/*.h'
-      map.resources = 'Source/BaiduMapAPI_Map.framework/Resource/mapapi.bundle'
+      map.resources = 'Source/BaiduMapAPI_Map.framework/Resources/mapapi.bundle'
       map.frameworks = 'BaiduMapAPI_Map'
-      map.preserve_paths = 'Source/BaiduMapAPI_Map.framework'
+      map.vendored_frameworks = 'Source/BaiduMapAPI_Map.framework'
       map.dependency 'BaiduMapSDK_Haidora/Base'
   end
   s.subspec 'Radar' do |radar|
       radar.source_files = 'Source/BaiduMapAPI_Radar.framework/Headers/*.h'
       radar.frameworks = 'BaiduMapAPI_Radar'
-      radar.preserve_paths = 'Source/BaiduMapAPI_Radar.framework'
+      radar.vendored_frameworks = 'Source/BaiduMapAPI_Radar.framework'
       radar.dependency 'BaiduMapSDK_Haidora/Base'
   end
   s.subspec 'Search' do |search|
       search.source_files = 'Source/BaiduMapAPI_Search.framework/Headers/*.h'
       search.frameworks = 'BaiduMapAPI_Search'
-      search.preserve_paths = 'Source/BaiduMapAPI_Search.framework'
+      search.vendored_frameworks = 'Source/BaiduMapAPI_Search.framework'
       search.dependency 'BaiduMapSDK_Haidora/Base'
   end
   s.subspec 'Utils' do |utils|
       utils.source_files = 'Source/BaiduMapAPI_Utils.framework/Headers/*.h'
       utils.frameworks = 'BaiduMapAPI_Utils'
-      utils.preserve_paths = 'Source/BaiduMapAPI_Utils.framework'
+      utils.vendored_frameworks = 'Source/BaiduMapAPI_Utils.framework'
       utils.dependency 'BaiduMapSDK_Haidora/Base'
   end
 end
